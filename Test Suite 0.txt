@@ -1,0 +1,25 @@
+Test Session Suite 0
+Product Name:
+Team Members: Kenny Trowbridge, Parker Kimball, Casey Sigelmann
+
+Setup Information
+1.   Something about how to open/view the shit
+2.   
+3.   
+4.   
+
+Tests
+Test Case Number: 01
+Author: Parker Kimball
+Name: "Viewing the data"
+Purpose: "To affirm that the user can view the public data repository"
+Precondition: "Have a computer with internet access"
+Steps:
+1.   Open web browser
+2.   Go to url: 
+3.   Click on the file name ""
+Postcondition: "You should see a GitHub .csv file whose first line is the column names and the following lines displaying individual entries of data accumulated"
+
+Test Case Number: 02
+Auther: Parker Kimball
+Name: ""
