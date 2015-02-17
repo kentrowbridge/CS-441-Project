@@ -1,5 +1,5 @@
 Test Session Suite 0
-Product Name:
+Product Name: Green Lane Reports
 Team Members: Kenny Trowbridge, Parker Kimball, Casey Sigelmann
 
 Setup Information
@@ -7,7 +7,7 @@ Setup Information
 2.  Open a web browser
 
 Tests
-Test Case Number: 01
+Test Case Number: C1-0-00
 Author: Parker Kimball
 Name: "Viewing the data"
 Purpose: "To affirm that the user can view the public data repository"
@@ -16,7 +16,3 @@ Steps:
 1.   Open web browser
 2.   Go to url: https://www.google.com/fusiontables/DataSource?docid=1yEnieF6yhS_sBiViYm_0R2Rwf2AXzRHMg6JEIVFr#rows:id=1
 Postcondition: "You should see a google fusion table file whose first line is the column names and the following lines displaying individual entries of data accumulated"
-
-Test Case Number: 02
-Author: Parker Kimball
-Name: ""
