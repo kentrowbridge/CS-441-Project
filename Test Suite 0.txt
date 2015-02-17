@@ -3,10 +3,8 @@ Product Name:
 Team Members: Kenny Trowbridge, Parker Kimball, Casey Sigelmann
 
 Setup Information
-1.   Something about how to open/view the shit
-2.   
-3.   
-4.   
+1.  Have a computer with internet connection
+2.  Open a web browser
 
 Tests
 Test Case Number: 01
