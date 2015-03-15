@@ -1,0 +1,57 @@
+.sideBar{
+	background-color: black;
+	width: 17vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#leftSideBar{
+	float: left;
+}
+
+#rightSideBar{
+	float:right;
+}
+
+#titleBar{
+	position: absolute;
+	width:800px;
+	height:80px;
+	left:50%;
+	margin-left:-400px;
+	text-align: center;
+}
+
+body{
+	padding:0;
+	margin:0;
+}
+
+body div{
+	margin-top: 0px;
+}
+
+#leftSideBar p{
+	font-size: medium;
+	color:white; 
+	margin-top:40px;
+}
+
+#rightSideBar p{
+	font-size:medium;
+	color:white;
+	margin-top: 20px;
+}
+
+#rightSideBar h3{
+	margin:0;
+}
+
+span {
+	color: green;
+}
+
+
+
