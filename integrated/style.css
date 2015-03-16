@@ -15,10 +15,10 @@
 
 #titleBar{
 	position: absolute;
-	width:80vw;
+	width:90vw;
 	height:8vh;
 	left:50%;
-	margin-left:-40vw;
+	margin-left:-45vw;
 	text-align: center;
 }
 
