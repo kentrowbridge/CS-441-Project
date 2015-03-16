@@ -22,24 +22,26 @@ function drawChart() {
     // two columns: Month and People Hours.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
-    data.addColumn('number', 'Number of Crashes');
-    data.addColumn('number', 'numcrash2');
+    data.addColumn('number', '2nd Ave');
+    data.addColumn('number', 'Couch St');
+    data.addColumn('number', 'Stark St');
 
     // Add rows for each year we have data for
     data.addRows([
-        ['2010', 6, 8],
-        ['2011', 7, 10],
-        ['2012', 5, 1],
-        ['2013', 4, 4]
+        ['2010', 6, 8, 2],
+        ['2011', 7, 10, 1],
+        ['2012', 5, 1, 4],
+        ['2013', 4, 4, 3]
     ]);
 
     // Set the options for the chart to be drawn.  This include the
     // width, height, title, horizontal axis, vertical axis.  Finally
     // turn off the legend.
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
     var options = {
-        width: 1000,
-        height: 563,
-        title: 'Crashes per year',
+        width: windowWidth/2,
+        height: windowHeight/2,
         hAxis: {
             title: 'Year'
         },
@@ -47,7 +49,7 @@ function drawChart() {
             title: 'Crashes'
         },
         legend: {
-            position: 'none'
+            position: 'right'
         }
     };
 
