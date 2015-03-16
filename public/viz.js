@@ -23,13 +23,14 @@ function drawChart() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
     data.addColumn('number', 'Number of Crashes');
+    data.addColumn('number', 'numcrash2');
 
     // Add rows for each year we have data for
     data.addRows([
-        ['2010', 6],
-        ['2011', 7],
-        ['2012', 5],
-        ['2013', 4]
+        ['2010', 6, 8],
+        ['2011', 7, 10],
+        ['2012', 5, 1],
+        ['2013', 4, 4]
     ]);
 
     // Set the options for the chart to be drawn.  This include the
