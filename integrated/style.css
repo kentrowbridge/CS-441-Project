@@ -7,26 +7,18 @@
 	text-align: center;
 }
 
-#leftSideBar{
-	float: left;
-}
-
-#rightSideBar{
-	float:right;
-}
-
 #graphBox{
-    width: 1000px;
+    width: 80vw;
     margin-left: auto;
     margin-right: auto;
 }
 
 #titleBar{
 	position: absolute;
-	width:800px;
-	height:80px;
+	width:80vw;
+	height:8vh;
 	left:50%;
-	margin-left:-400px;
+	margin-left:-40vw;
 	text-align: center;
 }
 
@@ -40,13 +32,15 @@ body div{
 }
 
 #leftSideBar p{
-	font-size: medium;
+	font-family: "Sans-serif";
+	font-size: small;
 	color:white; 
 	margin-top:40px;
 }
 
 #rightSideBar p{
-	font-size:medium;
+	font-family: "Sans-serif";
+	font-size:small;
 	color:white;
 	margin-top: 20px;
 }
