@@ -1,9 +1,71 @@
+#titleBar{
+	width:75vw;
+	height:16vh;
+	text-align: center;
+	vertical-align: center;
+	margin-top: 10px;
+	font-size: 85px;
+	text-shadow: 1.5px 1.5px #000000;
+	font-family: 'Old Standard TT', serif;
+	font-weight: bold;
+	color: #69BD45;
+	border: 2px solid gray;
+	outline: 2px solid black;
+	position: absolute;
+	left: 0;
+  	right: 0;
+  	top: 15px;
+  	margin: 0 auto;
+  	background-color: white;
+}
+
+span {
+	color: #059446;
+}
+
+span.highlight {
+	color: #69BD45;
+}
+
+p.space {
+	padding-top: 1vh;
+}
+
+p.bottom {
+	padding-top: 8vh;
+}
+
 .sideBar{
-	background-color: black;
-	width: 17vw;
+	width: 15vw;
 	height: 100vh;
-	margin: 0;
-	padding: 0;
+	text-align: center;
+	vertical-align: center;
+	color:white;
+	background-color: black;
+	font-size: 14px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#leftSideBar{
+	float: left;
+	padding-top: 22vh;
+	text-align: center;
+}
+
+#leftSideBar p.resource{
+	color: #69BD45; 
+	font-style: italic; 
+	font-weight: bold;
+}
+
+#leftSideBar a{
+	text-decoration: none;
+	color: #FFFFFF; 
+}
+
+#rightSideBar{
+	float: right;
+	padding-top: 22vh;
 	text-align: center;
 }
 
@@ -13,13 +75,11 @@
     margin-right: auto;
 }
 
-#titleBar{
-	position: absolute;
-	width:90vw;
-	height:8vh;
-	left:50%;
-	margin-left:-45vw;
+#instructions{
 	text-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 body{
@@ -31,27 +91,8 @@ body div{
 	margin-top: 0px;
 }
 
-#leftSideBar p{
-	font-family: "Sans-serif";
-	font-size: small;
-	color:white; 
-	margin-top:40px;
+button{
+	width: 130px;
 }
-
-#rightSideBar p{
-	font-family: "Sans-serif";
-	font-size:small;
-	color:white;
-	margin-top: 20px;
-}
-
-#rightSideBar h3{
-	margin:0;
-}
-
-span {
-	color: green;
-}
-
 
 
