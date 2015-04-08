@@ -3,8 +3,8 @@
 	<head>
 		<title>Portland Accidents Visualization</title>
         	<link rel="stylesheet" type="text/css" href="../integrated/style.css">
-            	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+        	<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+        	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
     		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
     		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
     		<script type="text/javascript" src="js/chart.js"></script>
@@ -12,147 +12,133 @@
     		<script type="text/javascript" src="js/viz.js"></script>
 	</head>
 	<body>
-
 		<div id="titleBar">
-			<span style="font-size: 80px;">Portland Bike Accidents</span>
+			Portland Bike Accidents
 		</div>
 
-		<div id="leftSideBar" class="sideBar" style="float:left;">
+		<div class="sideBar" id="leftSideBar">
 			<p>
-				Here is some information about the <span>green lane</span>.
+				What is<br/>the <span>Green Lane Project</span>?<br/>
+				<p class="space"/>
+				
+				This project's purpose is to create <span>dedicated bike lanes</span> on
+				roadways across the nation and provide more protection for bikes <span>
+				sharing the road</span> with general traffic. <br/>
+				<p class="space"/>
+				
+				Portland first created a protected bike lane in <span>2009</span> on SW
+				Broadway and also started creating <span>Green Lanes</span> in 2011.
+				Portland has a total of four <span>Green Lanes</span> on SW Broadway, SW
+				Moody, NE Cully Blvd., and NE Multnomah St. <br/> 
+				<p class="space"/>
+				
+				The <span>Green Lane</span> uses physical barriers, specially marked bike
+				lanes, and other features in order to <span>separate traffic from
+				bicycles</span>. <br/>
+				<p class="bottom"/>
+				
+				<i><span class="highlight">Find out more about the Green<br/>Lane Project from their
+				<a href="http://www.peopleforbikes.org/green-lane-project">website</a></span></i>
 			</p>
-			<p>
-				This project's purpose is to create <span>dedicated bike lanes</span> on roadways across
-				 the nation and provide more protection for
-				  bikes <span>sharing the road</span> with 
-				  general traffic.
-			</p>
-			<p>
-				Portland first cerated a protected bike lane in
-				 <span>2009</span> on SW Broadway and also 
-				 start creating designated <span>Green Lanes
-				</span> in 2011. Portland has a total of four 
-				 <span>Green Lanes</span> on SW Broadway, SW 
-				 Moody, NE Cully Blvd, and NE Multnomah St.
-			</p>
-			<p>
-				<span>The Green Lane</span> uses physical 
-				barriers and other features in ord to <span>
-				seperate traffic from bicycles</span>.
-			</p>
-			<p>
-				<span>For more information about the green lane, click <a href="http://www.peopleforbikes.org/green-lane-project">here</a>.</span>
-			</p>
-
 		</div>
 
-		<div id="rightSideBar" class="sideBar" style="float:right;">
+		<div id="rightSideBar" class="sideBar">
 			<p>
-				Where has the <span>Green Lane</span> been
-				 implemented?
-			</p>
-			<h3><span>SW BROADWAY BLVD</span></h3>
-			<p>
-				The first protected bike lane which was 
-				installed in 2009.  This <span>Green Lane</span>
-				 is 0.33 miles long, running form SW Clay to SW 
-				 Jackson.
-			</p>
-			<h3><span>SW MOODY ST</span></h3>
-			<p>
-				This lane was installed in 2011, and featured a 
-				two-way bike path that spans 0.60 miles with 
-				protected signal phases at the entrance and exit
-				.
-			</p>
-			<h3><span>NE CULLY BLVD</span></h3>
-			<p>
-				This lane, also installed 2011, is actually two 
-				one-way <span>protected bike lanes</span> that 
-				spans 1.18 miles in NE Portland.
-			</p>
-			<h3><span>NE MULTNOMAH ST</span></h3>
-			<p>
-				The fourth lane, the current longest <span>
-				Green Lane</span> in Portland, stretches 1
-				.22miles. This lane is seperated by flexible
-				 delineators keeping the <span>bicyclists 
-				 protected</span> from the cars on the road.
+				Where has the <span>Green Lane</span> been implemented? <br/>
+				<p class="space"/>
+				<b><span class="highlight">SW BROADWAY BLVD</span></b> <br/>
+				
+				The first protected bike lane which was installed in 2009. This <span>
+				Green Lane</span> is 0.33 miles long, running form SW Clay to SW Jackson. <br/>
+				<p class="space"/>
+				<b><span class="highlight">SW MOODY ST</span></b> <br/>
+				
+				This lane was installed in 2011, and featured a two-way bike path that 
+				spans 0.60 miles with protected signal phases at the entrance and exit. <br/>
+				<p class="space"/>
+				<b><span class="highlight">NE CULLY BLVD</span></b> <br/>
+			
+				This lane, also installed 2011, is actually two one-way <span>protected 
+				bike lanes</span> that spans 1.18 miles in NE Portland. <br/>
+				<p class="space"/>
+				<b><span class="highlight">NE MULTNOMAH ST</span></b> <br/>
+			
+				The fourth lane, the current longest <span> Green Lane</span> in Portland,
+				stretches 1.22miles. This lane is seperated by flexible delineators
+				keeping the <span>bicyclists protected</span> from the cars on the road. <br/>
 			</p>
 		</div>
 
 		<div id="centerDiv">
-			<div id="graphBox" style="padding-top:100px;">
+			<div id="graphBox" style="padding-top:20vh;">
 				GRAPH TO BE ADDED
 			</div>
-			<div id="instructions" style="text-align: center; font-size: 14px">
-				Choose up to five streets to display on the graph above by clicking on their respective buttons below.
+			<div id="instructions">
+				Select up to 5 streets at a time
 			</div>
-			
-			<div id="streetBox">
 				<table align="center" style="float:bottom;">
 				  	<tr align="center">
-					  	<td><button type="button">2nd Ave</button></td>
-						<td><button type="button">20th Ave</button></td>
-						<td><button type="button">Cesar Chavez Blvd</button></td>
-						<td><button type="button">Hawthorne Blvd</button></td>
-						<td><button type="button">Powell Blvd</button></td>
+					  	<td><button style="font-size:12px" type="button">2nd Ave</button></td>
+						<td><button style="font-size:12px" type="button">20th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Cesar Chavez Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Hawthorne Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Powell Blvd</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">3rd Ave</button></td>
-						<td><button type="button">28th Ave</button></td>
-						<td><button type="button">Couch St</button></td>
-						<td><button type="button">Holgate Blvd</button></td>
-						<td><button type="button">Salmon St</button></td>
+					    <td><button style="font-size:12px" type="button">3rd Ave</button></td>
+						<td><button style="font-size:12px" type="button">28th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Couch St</button></td>
+						<td><button style="font-size:12px" type="button">Holgate Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Salmon St</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">6th Ave</button></td>
-						<td><button type="button">30th Ave</button></td>
-						<td><button type="button">Cully Blvd</button></td>
-						<td><button type="button">Interstate Ave</button></td>
-						<td><button type="button">Sandy Blvd</button></td>
+					    <td><button style="font-size:12px" type="button">6th Ave</button></td>
+						<td><button style="font-size:12px" type="button">30th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Cully Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Interstate Ave</button></td>
+						<td><button style="font-size:12px" type="button">Sandy Blvd</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">7th Ave</button></td>
-						<td><button type="button">82nd Ave</button></td>
-						<td><button type="button">Division St</button></td>
-						<td><button type="button">Killingsworth St</button></td>
-						<td><button type="button">Stark St</button></td>
+					    <td><button style="font-size:12px" type="button">7th Ave</button></td>
+						<td><button style="font-size:12px" type="button">82nd Ave</button></td>
+						<td><button style="font-size:12px" type="button">Division St</button></td>
+						<td><button style="font-size:12px" type="button">Killingsworth St</button></td>
+						<td><button style="font-size:12px" type="button">Stark St</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">11th Ave</button></td>
-						<td><button type="button">122nd Ave</button></td>
-						<td><button type="button">Everett St</button></td>
-						<td><button type="button">Lombard Ave</button></td>
-						<td><button type="button">Vancouver Ave</button></td>
+					    <td><button style="font-size:12px" type="button">11th Ave</button></td>
+						<td><button style="font-size:12px" type="button">122nd Ave</button></td>
+						<td><button style="font-size:12px" type="button">Everett St</button></td>
+						<td><button style="font-size:12px" type="button">Lombard Ave</button></td>
+						<td><button style="font-size:12px" type="button">Vancouver Ave</button></td>
 				  	</tr>
 				 	<tr align="center">
-					    <td><button type="button">12th Ave</button></td>
-						<td><button type="button">Barbur Blvd</button></td>
-						<td><button type="button">Foster Rd</button></td>
-						<td><button type="button">MLK Blvd</button></td>
-						<td><button type="button">Weidler St</button></td>
+					    <td><button style="font-size:12px" type="button">12th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Barbur Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Foster Rd</button></td>
+						<td><button style="font-size:12px" type="button">MLK Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Weidler St</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">14th Ave</button></td>
-						<td><button type="button">Broadway Blvd</button></td>
-						<td><button type="button">Fremont St</button></td>
-						<td><button type="button">Madison St</button></td>
-						<td><button type="button">Wheeler Ave</button></td>
+					    <td><button style="font-size:12px" type="button">14th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Broadway Blvd</button></td>
+						<td><button style="font-size:12px" type="button">Fremont St</button></td>
+						<td><button style="font-size:12px" type="button">Madison St</button></td>
+						<td><button style="font-size:12px" type="button">Wheeler Ave</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">16th Ave</button></td>
-						<td><button type="button">Burnside St</button></td>
-						<td><button type="button">Glisan St</button></td>
-						<td><button type="button">Multnomah St</button></td>
-						<td><button type="button">Williams Ave</button></td>
+					    <td><button style="font-size:12px" type="button">16th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Burnside St</button></td>
+						<td><button style="font-size:12px" type="button">Glisan St</button></td>
+						<td><button style="font-size:12px" type="button">Multnomah St</button></td>
+						<td><button style="font-size:12px" type="button">Williams Ave</button></td>
 				  	</tr>
 				  	<tr align="center">
-					    <td><button type="button">20th Ave</button></td>
-						<td><button type="button">Capitol Hwy</button></td>
-						<td><button type="button">Grand Ave</button></td>
-						<td><button type="button">Moody St</button></td>
-						<td><button type="button">Yamhill St</button></td>
+					    <td><button style="font-size:12px" type="button">20th Ave</button></td>
+						<td><button style="font-size:12px" type="button">Capitol Hwy</button></td>
+						<td><button style="font-size:12px" type="button">Grand Ave</button></td>
+						<td><button style="font-size:12px" type="button">Moody St</button></td>
+						<td><button style="font-size:12px" type="button">Yamhill St</button></td>
 				  	</tr>
 				</table>
 			</div>
