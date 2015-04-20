@@ -14,7 +14,7 @@
 
 google.load('visualization', '1', { packages: ['corechart'] });
 
-google.setOnLoadCallback(drawVisualization);
+google.setOnLoadCallback(drawChart1);
 
 function createChart() {
 
@@ -23,10 +23,10 @@ function createChart() {
 function drawVisualization() {
     google.visualization.drawChart({
         "containerId": "graphBox",
-        "dataSourceUrl": "//www.google.com/fusiontables/gvizdata?tq=",
+        "dataSourceUrl": "https://www.google.com/fusiontables/gvizdata?tq=",
         "query": "SELECT 'Street1', 'Street2', 'NumAccidents' FROM " +
-                "1ryBKJZ2RBhs5peuFtbeeXxOJ7oGkTUWQWqKB7xS9",
-        "refreshInterval": 5,
+                "12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy",
+        "refreshInterval": 500,
         "chartType": "Table",
         "options": {}
     })
@@ -35,10 +35,10 @@ function drawVisualization() {
 function drawChart1() {
 
     // Get the whole Fusion table
-    var query = "SELECT Street1 FROM 1ryBKJZ2RBhs5peuFtbeeXxOJ7oGkTUWQWqKB7xS9";
+    var query = "SELECT Street1 FROM 12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy";
     console.log(query);
     var opts = { sendMethod: 'auto' };
-    var queryObj = new google.visualization.Query('//www.google.com/fusiontables/gvizdata?tq=', opts);
+    var queryObj = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq=', opts);
     console.log("Query:");
     console.log(queryObj);
 
@@ -77,7 +77,7 @@ function drawChart1() {
         // Create the view for 2nd Ave
         var thisStreet = "2nd Avenue";
         views[thisStreet] = new google.visualization.DataView(data);
-        views[thisStreet].setRows(views[thisYear].getFilteredRows([{ column: 0, value: thisStreet }]));
+        views[thisStreet].setRows(views[thisStreet].getFilteredRows([{ column: 0, value: thisStreet }]));
         views[thisStreet].setColumns([0, 1]);
 
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
