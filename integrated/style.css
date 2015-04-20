@@ -37,7 +37,7 @@ p.bottom {
 
 .sideBar{
 	width: 15vw;
-	height: 100vh;
+	height: 110vh;
 	text-align: center;
 	vertical-align: center;
 	color:white;
@@ -73,6 +73,10 @@ p.bottom {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+#checkTable tr td{
+	padding-right:15px;
 }
 
 #instructions{
