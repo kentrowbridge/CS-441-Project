@@ -58,8 +58,6 @@ function drawChart() {
         // set columns of the view based on which buttons are selected
         var strs = getCheckedBoxes();
         var colNums = translateToColNums(strs, view);
-        console.log(strs);
-        console.log(colNums);
         view.setColumns(colNums);
 
         // draw the view
