@@ -36,7 +36,7 @@ function drawVisualization() {
 function drawChart1() {
 
     // Get the whole Fusion table
-    var query = "SELECT Street1, NumAccidents FROM 12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy";
+    var query = "SELECT Street1, Year, NumAccidents FROM 12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy";
     console.log(query);
     var opts = { sendMethod: 'auto' };
     var queryObj = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq=', opts);
@@ -65,24 +65,44 @@ function drawChart1() {
     // Define variables to hold the entire fusion table
     // and a collection of views, one for each street
     var data;
-    var views = {};
+    var view;
+    var invTable;
 
     // Send the query and create the data for 2nd Ave
     queryObj.setQuery(query);
     queryObj.send(function (e) {
-        console.log("Response:");
-        console.log(e);
 
         data = e.getDataTable();
 
-        // Create the view for 2nd Ave
-        var thisStreet = "2nd Avenue";
-        views[thisStreet] = new google.visualization.DataView(data);
-        views[thisStreet].setRows(views[thisStreet].getFilteredRows([{ column: 0, value: thisStreet }]));
-        views[thisStreet].setColumns([0, 1]);
 
+        view = new google.visualization.DataView(data);
+        
+        view.setRows(data.getFilteredRows([{ column: 0, value: "2nd Avenue" }]));
+
+        console.log("HELLOILIKETURTLES");
+        // Create the inverted view
+        invertedView = new google.visualization.DataView();
+        invertedView.addColumn('string');
+        for (row = 1; row < view.getNumberOfRows() ; row++)
+        {
+            invertedView.addColumn('Number')
+        }
+        for (col = 0; col < view.getNumberOfColumns() ; col++)
+        {
+            invertedView.addRow()
+        }
+        console.log("HELLOILIKETURTLES");
+        // Invert the view
+        for (row = 0; row < view.getNumberOfRows() ; row++)
+        {
+            for (col = 0; col < view.getNumberOfColumns(); col++)
+            {
+                invertedView.setCell(col, row, view.getValue(row, col));
+            }
+        }
+        console.log("HELLOILIKETURTLES");
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
-        chart.draw(data, options);
+        chart.draw(view.toDataTable(), options);
 
     })
 
