@@ -56,8 +56,11 @@ function drawChart() {
         view = new google.visualization.DataView(data);
         
         // set columns of the view based on which buttons are selected
-        getCheckedBoxes();
-        view.setColumns([0,2,3,4,5,6,7]);
+        var strs = getCheckedBoxes();
+        var colNums = translateToColNums(strs, view);
+        console.log(strs);
+        console.log(colNums);
+        view.setColumns(colNums);
 
         // draw the view
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
@@ -66,7 +69,9 @@ function drawChart() {
     })
 }
 
-function getCheckedBoxes(){
+
+function getCheckedBoxes()
+{
     var strArr = [];
     //retrieve all boxes
     var boxList = document.getElementsByClassName("cbox");
@@ -77,10 +82,44 @@ function getCheckedBoxes(){
     {//keep a count of the number of checked boxes
         if(boxList[i].checked)
         {
-            strArr[strArr.length] = boxList[i].name
+            strArr[strArr.length] = boxList[i].name;
         }
     }
-    console.log(strArr);
+    return strArr;
+}
+
+function translateToColNums(array, view)
+{
+    // initialize variables
+    var str;
+    var colNum;
+    // initialize newArray so that the year column will be first
+    var newArray = [0];
+
+    //loop through the array of strings
+    for(var i = 0; i < array.length; i++)
+    {
+        str = array[i];
+        colNum = -1;
+
+        //get the column number for a given string
+        for(var j = 0; j < view.getNumberOfColumns(); j++)
+        {
+            if(str == view.getColumnLabel(j))
+            {
+                colNum = j;
+            }
+        }
+
+        //if we found it, add it to the newArray
+        if(colNum != -1)
+        {
+            newArray[newArray.length] = colNum;
+        }
+
+    }
+
+    return newArray;
 }
 
 window.onresize = function(){ location.reload(); };
