@@ -26,7 +26,7 @@ function drawVisualization() {
         "containerId": "graphBox",
         "dataSourceUrl": "https://www.google.com/fusiontables/gvizdata?tq=",
         "query": "SELECT 'Street1', 'NumAccidents' FROM " +
-                "12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy WHERE Street1 IN '2nd Avenue'",
+                "1UZvX_REFzOYcCSvFO4ynGV3en00sJ3h3OQHmMCXh WHERE Street1 IN '2nd Avenue'",
         "refreshInterval": 500,
         "chartType": "ColumnChart",
         "options": {}
@@ -36,7 +36,7 @@ function drawVisualization() {
 function drawChart1() {
 
     // Get the whole Fusion table
-    var query = "SELECT Street1, Year, NumAccidents FROM 12nDINQjBEvtlBWBLd_FqDoUAbR7ssXWfEQX1CCJy";
+    var query = "SELECT * FROM 1UZvX_REFzOYcCSvFO4ynGV3en00sJ3h3OQHmMCXh";
     console.log(query);
     var opts = { sendMethod: 'auto' };
     var queryObj = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq=', opts);
@@ -78,7 +78,7 @@ function drawChart1() {
         view = new google.visualization.DataView(data);
         
         
-        view.setColumns([1,2]);
+        view.setColumns([0,2,3,4,5,6,7]);
 
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
         chart.draw(view.toDataTable(), options);
