@@ -56,6 +56,7 @@ function drawChart() {
         view = new google.visualization.DataView(data);
         
         // set columns of the view based on which buttons are selected
+        getCheckedBoxes();
         view.setColumns([0,2,3,4,5,6,7]);
 
         // draw the view
@@ -63,6 +64,23 @@ function drawChart() {
         chart.draw(view.toDataTable(), options);
 
     })
+}
+
+function getCheckedBoxes(){
+    var strArr = [];
+    //retrieve all boxes
+    var boxList = document.getElementsByClassName("cbox");
+
+    //make sure only 5 are checked
+    var counter = 0;
+    for (var i = 0; i < boxList.length; i++)
+    {//keep a count of the number of checked boxes
+        if(boxList[i].checked)
+        {
+            strArr[strArr.length] = boxList[i].name
+        }
+    }
+    console.log(strArr);
 }
 
 window.onresize = function(){ location.reload(); };
