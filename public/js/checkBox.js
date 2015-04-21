@@ -23,10 +23,13 @@ function checkBoxLimit(){
 
 
 	for (var j = 0; j < boxList.length; j++)
-		{//disable/enable all boxes not checked
-			if(!boxList[j].checked)
-			{//if 5boxes, disable, if <5 boxes, enable
-				boxList[j].disabled = disable;
-			}
+	{//disable/enable all boxes not checked
+		if(!boxList[j].checked)
+		{//if 5boxes, disable, if <5 boxes, enable
+			boxList[j].disabled = disable;
 		}
+	}
+
+	//redraw the chart
+	drawChart();
 }
