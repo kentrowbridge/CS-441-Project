@@ -9,43 +9,23 @@
  * https://github.com/crenshaw/thelibrarians/tree/master/simple
  *
  * @author: Casey Sigelmann
- * @since: March 15, 2015
+ * @since: April 21, 2015
  */
 
 google.load('visualization', '1', { packages: ['corechart'] });
 
-//google.setOnLoadCallback(drawVisualization);
-google.setOnLoadCallback(drawChart1);
+google.setOnLoadCallback(drawChart);
 
-function createChart() {
 
-}
-
-function drawVisualization() {
-    google.visualization.drawChart({
-        "containerId": "graphBox",
-        "dataSourceUrl": "https://www.google.com/fusiontables/gvizdata?tq=",
-        "query": "SELECT 'Street1', 'NumAccidents' FROM " +
-                "1UZvX_REFzOYcCSvFO4ynGV3en00sJ3h3OQHmMCXh WHERE Street1 IN '2nd Avenue'",
-        "refreshInterval": 500,
-        "chartType": "ColumnChart",
-        "options": {}
-    })
-}
-
-function drawChart1() {
+function drawChart() {
 
     // Get the whole Fusion table
     var query = "SELECT * FROM 1UZvX_REFzOYcCSvFO4ynGV3en00sJ3h3OQHmMCXh";
-    console.log(query);
     var opts = { sendMethod: 'auto' };
     var queryObj = new google.visualization.Query('https://www.google.com/fusiontables/gvizdata?tq=', opts);
-    console.log("Query:");
-    console.log(queryObj);
 
     // Set the options for the chart to be drawn.  This include the
-    // width, height, title, horizontal axis, vertical axis.  Finally
-    // turn off the legend.
+    // width, height, title, horizontal axis, vertical axis.
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
     var options = {
@@ -66,50 +46,23 @@ function drawChart1() {
     // and a collection of views, one for each street
     var data;
     var view;
-    var invertedView;
 
-    // Send the query and create the data for 2nd Ave
+    // Send the query and create the view
     queryObj.setQuery(query);
     queryObj.send(function (e) {
 
         data = e.getDataTable();
 
-
         view = new google.visualization.DataView(data);
         
-        
+        // set columns of the view based on which buttons are selected
         view.setColumns([0,2,3,4,5,6,7]);
 
+        // draw the view
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
         chart.draw(view.toDataTable(), options);
 
     })
-
-    // Store the data by creating a google DataTable object with
-    // two columns: Month and People Hours.
-    //var data = new google.visualization.DataTable();
-    //data.addColumn('string', 'Year');
-    //data.addColumn('number', '2nd Ave');
-    //data.addColumn('number', 'Couch St');
-    //data.addColumn('number', 'Stark St');
-
-    // Add rows for each year we have data for
-    //data.addRows([
-    //    ['2010', 6, 8, 2],
-    //    ['2011', 7, 10, 1],
-    //    ['2012', 5, 1, 4],
-    //    ['2013', 4, 4, 3]
-    //]);
-
-    
-
-    // Create a new viz object using the google API -- specifically,
-    // we are going to make a column chart inside the div called graphBox
-    // in the html file.
-    //var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
-
-    // Draw the chart with the supplied options.
-    //chart.draw(data, options);
 }
 
 window.onresize = function(){ location.reload(); };
