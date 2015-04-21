@@ -66,7 +66,7 @@ function drawChart1() {
     // and a collection of views, one for each street
     var data;
     var view;
-    var invTable;
+    var invertedView;
 
     // Send the query and create the data for 2nd Ave
     queryObj.setQuery(query);
@@ -77,30 +77,9 @@ function drawChart1() {
 
         view = new google.visualization.DataView(data);
         
-        view.setRows(data.getFilteredRows([{ column: 0, value: "2nd Avenue" }]));
+        
+        view.setColumns([1,2]);
 
-        console.log("HELLOILIKETURTLES");
-        // Create the inverted view
-        invertedView = new google.visualization.DataView();
-        invertedView.addColumn('string');
-        for (row = 1; row < view.getNumberOfRows() ; row++)
-        {
-            invertedView.addColumn('Number')
-        }
-        for (col = 0; col < view.getNumberOfColumns() ; col++)
-        {
-            invertedView.addRow()
-        }
-        console.log("HELLOILIKETURTLES");
-        // Invert the view
-        for (row = 0; row < view.getNumberOfRows() ; row++)
-        {
-            for (col = 0; col < view.getNumberOfColumns(); col++)
-            {
-                invertedView.setCell(col, row, view.getValue(row, col));
-            }
-        }
-        console.log("HELLOILIKETURTLES");
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
         chart.draw(view.toDataTable(), options);
 
