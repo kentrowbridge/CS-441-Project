@@ -7,9 +7,8 @@
         	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
     		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
     		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    		<script type="text/javascript" src="js/chart.js"></script>
-    		<script type="text/javascript" src="js/controller.js"></script>
     		<script type="text/javascript" src="js/viz.js"></script>
+    		<script type="text/javascript" src="js/checkBox.js"></script>
 	</head>
 	<body>
 		<div id="titleBar">
@@ -75,71 +74,61 @@
 			<div id="instructions">
 				Select up to 5 streets at a time
 			</div>
-				<table id="checkTable" align="center">
-				  	<tr align="left">
-					  	<td><input type="checkbox">2nd Ave</input></td>
-						<td><input type="checkbox">20th Ave</input></td>
-						<td><input type="checkbox">Cesar Chavez Blvd</input></td>
-						<td><input type="checkbox">Hawthorne Blvd</input></td>
-						<td><input type="checkbox">Powell Blvd</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">3rd Ave</input></td>
-						<td><input type="checkbox">28th Ave</input></td>
-						<td><input type="checkbox">Couch St</input></td>
-						<td><input type="checkbox">Holgate Blvd</input></td>
-						<td><input type="checkbox">Salmon St</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">6th Ave</input></td>
-						<td><input type="checkbox">30th Ave</input></td>
-						<td><input type="checkbox">Cully Blvd</input></td>
-						<td><input type="checkbox">Interstate Ave</input></td>
-						<td><input type="checkbox">Sandy Blvd</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">7th Ave</input></td>
-						<td><input type="checkbox">82nd Ave</input></td>
-						<td><input type="checkbox">Division St</input></td>
-						<td><input type="checkbox">Killingsworth St</input></td>
-						<td><input type="checkbox">Stark St</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">11th Ave</input></td>
-						<td><input type="checkbox">122nd Ave</input></td>
-						<td><input type="checkbox">Everett St</input></td>
-						<td><input type="checkbox">Lombard Ave</input></td>
-						<td><input type="checkbox">Vancouver Ave</input></td>
-				  	</tr>
-				 	<tr align="left">
-					    <td><input type="checkbox">12th Ave</input></td>
-						<td><input type="checkbox">Barbur Blvd</input></td>
-						<td><input type="checkbox">Foster Rd</input></td>
-						<td><input type="checkbox">MLK Blvd</input></td>
-						<td><input type="checkbox">Weidler St</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">14th Ave</input></td>
-						<td><input type="checkbox">Broadway Blvd</input></td>
-						<td><input type="checkbox">Fremont St</input></td>
-						<td><input type="checkbox">Madison St</input></td>
-						<td><input type="checkbox">Wheeler Ave</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">16th Ave</input></td>
-						<td><input type="checkbox">Burnside St</input></td>
-						<td><input type="checkbox">Glisan St</input></td>
-						<td><input type="checkbox">Multnomah St</input></td>
-						<td><input type="checkbox">Williams Ave</input></td>
-				  	</tr>
-				  	<tr align="left">
-					    <td><input type="checkbox">20th Ave</input></td>
-						<td><input type="checkbox">Capitol Hwy</input></td>
-						<td><input type="checkbox">Grand Ave</input></td>
-						<td><input type="checkbox">Moody St</input></td>
-						<td><input type="checkbox">Yamhill St</input></td>
-				  	</tr>
-				</table>
+				<form id="checkTable" align="center">
+					  	<input type="checkbox" class="cbox" id="test" onclick="checkBoxLimit()">2nd Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">20th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Cesar Chavez Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Hawthorne Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Powell Blvd</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">3rd Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">28th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Couch St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Holgate Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Salmon St</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">6th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">30th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Cully Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Interstate Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Sandy Blvd</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">7th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">82nd Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Division St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Killingsworth St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Stark St</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">11th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">122nd Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Everett St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Lombard Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Vancouver Ave</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">12th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Barbur Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Foster Rd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">MLK Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Weclassler St</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">14th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Broadway Blvd</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Fremont St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Madison St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Wheeler Ave</input>
+				  	
+					    <input type="checkbox" class="cbox" onclick="checkBoxLimit()">16th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Burnsclasse St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Glisan St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Multnomah St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Williams Ave</input>
+				  		<input type="checkbox" class="cbox" onclick="checkBoxLimit()">20th Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Capitol Hwy</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Grand Ave</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Moody St</input>
+						<input type="checkbox" class="cbox" onclick="checkBoxLimit()">Yamhill St</input>
+				  	
+				</form>
 			</div>
 		</div>		
 	</body>
