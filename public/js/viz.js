@@ -60,6 +60,9 @@ function drawChart() {
         var colNums = translateToColNums(strs, view);
         view.setColumns(colNums);
 
+        // only show headers and rows for the year (not total)
+        view.setRows([0,1,2,3]);
+
         // draw the view
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
         chart.draw(view.toDataTable(), options);
