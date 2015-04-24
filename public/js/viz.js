@@ -66,7 +66,7 @@ function drawChart() {
         // then loop through columns and see if we have a green lane
         for (var i = 0; i < colNums.length; i++)
         {
-            if(isGreenLane(i))
+            if(isGreenLane(strs[i]))
             {
                 //set the array at i to green
                 colorArr[i] = '#00cc00';
@@ -84,8 +84,12 @@ function drawChart() {
     })
 }
 
-function isGreenLane(index)
+function isGreenLane(name)
 {
+    if(name == 'Broadway' || name == 'Cully Boulevard' || name == 'Moody Avenue' || name == 'Multnomah Street')
+    {
+        return true;
+    }
     return false;
 }
 
