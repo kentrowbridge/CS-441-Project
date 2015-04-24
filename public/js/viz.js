@@ -60,6 +60,20 @@ function drawChart() {
         var colNums = translateToColNums(strs, view);
         view.setColumns(colNums);
 
+        // figure out the colors for the bars
+        // first make an array of 5 shades of gray
+        var colorArr = ['#c0c0c0', '#b0b0b0', '#a0a0a0', '#909090', '#808080'];
+        // then loop through columns and see if we have a green lane
+        for (var i = 0; i < colNums.length; i++)
+        {
+            if(isGreenLane(i))
+            {
+                //set the array at i to green
+                colorArr[i] = '#00cc00';
+            }
+        }
+        options.colors = colorArr;
+
         // only show headers and rows for the year (not total)
         view.setRows([0,1,2,3]);
 
@@ -68,6 +82,11 @@ function drawChart() {
         chart.draw(view.toDataTable(), options);
 
     })
+}
+
+function isGreenLane(index)
+{
+    return false;
 }
 
 
