@@ -77,6 +77,22 @@ function drawChart() {
         // only show headers and rows for the year (not total)
         view.setRows([0,1,2,3]);
 
+        // if nothing is selected, make a blank column and hide the legend so that a blank graph will be displayed
+        if(colNums.length < 2)
+        {
+            data = google.visualization.arrayToDataTable([
+                ['Year', 'dummy'],
+                ['2010', 0],
+                ['2011', 0],
+                ['2012', 0],
+                ['2013', 0]
+                ]);
+            options.legend = {position: 'none'};
+            options.vAxis.minValue = 0;
+            options.vAxis.maxValue = 10;
+            view = new google.visualization.DataView(data);
+        }
+
         // draw the view
         var chart = new google.visualization.ColumnChart(document.getElementById('graphBox'));
         chart.draw(view.toDataTable(), options);
